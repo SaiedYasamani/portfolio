@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:portfolio/pages/home_page.dart';
+import 'package:portfolio/presentation/feathures/home/home_page.dart';
 
 class Application extends StatelessWidget {
   const Application({super.key});
