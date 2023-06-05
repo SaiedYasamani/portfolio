@@ -266,19 +266,19 @@ class _HomePageState extends State<HomePage>
             bottomRight: Radius.circular(50),
           ),
         ),
-        child: Padding(
-          padding: const EdgeInsets.all(16),
+        child: const Padding(
+          padding: EdgeInsets.all(16),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Text(
+              Text(
                 'Saeed Yasamani',
                 style: TextStyle(
                   fontSize: 30,
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              const Text(
+              Text(
                 'Mobile Developer',
                 style: TextStyle(
                   fontSize: 20,
@@ -287,7 +287,7 @@ class _HomePageState extends State<HomePage>
                   color: Colors.green,
                 ),
               ),
-              const Padding(
+              Padding(
                 padding: EdgeInsets.only(top: 8, bottom: 8, right: 8),
                 child: Divider(
                   color: Colors.teal,
@@ -296,7 +296,7 @@ class _HomePageState extends State<HomePage>
                 ),
               ),
               Row(
-                children: const [
+                children: [
                   Icon(
                     Icons.phone_android_outlined,
                     size: 20,
@@ -313,7 +313,7 @@ class _HomePageState extends State<HomePage>
                 ],
               ),
               Row(
-                children: const [
+                children: [
                   Icon(
                     Icons.mail,
                     size: 20,
