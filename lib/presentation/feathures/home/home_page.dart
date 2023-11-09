@@ -71,13 +71,13 @@ class _HomePageState extends State<HomePage>
                 blackText('ATC - Android Application Development'),
                 greenText('Sematek Inc.')
               ]),
-              header('Skils'),
+              header('Skills'),
               bodyTwo([
                 blackTextTwo('Java, Kotlin, Dart, Flutter'),
                 blackTextTwo('Android Studio, VS code, Gradle'),
                 blackTextTwo(
-                    'Android Jetpack, Architecture Components, Rxjava, Dagger2, Hint, Room'),
-                blackTextTwo('MVVM, MPV, Clean Code'),
+                    'Android Jetpack, Jetpack Compose, Architecture Components, Rxjava, Dagger2, Hilt, Room'),
+                blackTextTwo('MVVM, MPV, MVI, Clean Code'),
                 blackTextTwo('Git, TFS, Jira'),
                 blackTextTwo('J-Unit, TDD'),
                 blackTextTwo('Scrum and Agile methods'),
