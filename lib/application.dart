@@ -9,19 +9,18 @@ class Application extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      localizationsDelegates: const[
-        GlobalMaterialLocalizations.delegate,
-        GlobalCupertinoLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate
-      ],
-      locale: const Locale('en','US'),
-      supportedLocales: const [Locale('en','US')],
-      initialRoute: '/',
-      routes: {
-        '/':(context) => const HomePage(),
-        '/applicationDetail': (context) => ApplicationDetail()
-      }
-    );
+        debugShowCheckedModeBanner: false,
+        localizationsDelegates: const [
+          GlobalMaterialLocalizations.delegate,
+          GlobalCupertinoLocalizations.delegate,
+          GlobalWidgetsLocalizations.delegate
+        ],
+        locale: const Locale('en', 'US'),
+        supportedLocales: const [Locale('en', 'US')],
+        initialRoute: '/',
+        routes: {
+          '/': (context) => const HomePage(),
+          '/applicationDetail': (context) => const ApplicationDetail()
+        });
   }
 }

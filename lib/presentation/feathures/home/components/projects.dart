@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/application.dart';
 import 'package:portfolio/model/details.dart';
 import 'package:portfolio/presentation/feathures/application_detail/application_detail.dart';
 import 'package:portfolio/utils/constants.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class Projects extends StatelessWidget {
   const Projects({

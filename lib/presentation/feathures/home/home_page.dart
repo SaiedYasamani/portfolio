@@ -40,24 +40,23 @@ class _HomePageState extends State<HomePage>
               profile(context),
               header('Work Experiences'),
               body([
-                company('Rayan Andishe Nasr'),
-                companyInfo('Mar/2020 - Now', 'Android Developer'),
+                company('Amn Pardaz'),
+                companyInfo('Aug/2024 - Nov/2024', 'Android Developer'),
+                Padding(
+                  padding: const EdgeInsets.only(top: 8.0),
+                  child: company('Rayan Andishe Nasr'),
+                ),
+                companyInfo('Apr/2021 - Mar/2024', 'Android Developer'),
                 Padding(
                   padding: const EdgeInsets.only(top: 8.0),
                   child: company('Bani Ertebat Mahan (Banico)'),
                 ),
-                companyInfo('Nov/2018 - Mar/2022', 'Mobile Developer'),
+                companyInfo('Nov/2018 - Mar/2021', 'Mobile Developer'),
                 Padding(
                   padding: const EdgeInsets.only(top: 8.0),
                   child: company('Sam Sirvan System'),
                 ),
-                companyInfo('Mar/2018 - Nov/2018', 'Android Developer'),
-                Padding(
-                  padding: const EdgeInsets.only(top: 8.0),
-                  child: company('Shaghayegh Printing Complex'),
-                ),
-                companyInfo(
-                    'Mar/2016 - Mar/2018', 'Android Developer - Graphist')
+                companyInfo('Mar/2018 - Nov/2018', 'Android Developer')
               ]),
               header('Education'),
               bodyTwo([
@@ -76,7 +75,7 @@ class _HomePageState extends State<HomePage>
                 blackTextTwo('Java, Kotlin, Dart, Flutter'),
                 blackTextTwo('Android Studio, VS code, Gradle'),
                 blackTextTwo(
-                    'Android Jetpack, Jetpack Compose, Architecture Components, Rxjava, Dagger2, Hilt, Room'),
+                    'Jetpack Compose, Architecture Components, Rxjava, Dagger2, Hilt, Room'),
                 blackTextTwo('MVVM, MPV, MVI, Clean Code'),
                 blackTextTwo('Git, TFS, Jira'),
                 blackTextTwo('J-Unit, TDD'),
