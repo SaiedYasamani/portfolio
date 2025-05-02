@@ -33,14 +33,19 @@ class _HomePageState extends State<HomePage>
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Stack(alignment: Alignment.center, children: [
-          background(context),
+          //background(context),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               profile(context),
               header('Work Experiences'),
               body([
-                company('Amn Pardaz'),
+                company('Faratahlilgaran Varjavand'),
+                companyInfo('Dec/2024 - Now', 'Technical Support Specialist'),
+                Padding(
+                  padding: const EdgeInsets.only(top: 8.0),
+                  child: company('Amn Pardaz'),
+                ),
                 companyInfo('Aug/2024 - Nov/2024', 'Android Developer'),
                 Padding(
                   padding: const EdgeInsets.only(top: 8.0),
@@ -65,6 +70,8 @@ class _HomePageState extends State<HomePage>
               ]),
               header('Certificates'),
               bodyTwo([
+                blackText('Sql implementation and design'),
+                greenText('Sematek Inc.'),
                 blackText('Advanced Android Programming'),
                 greenText('Sematek Inc.'),
                 blackText('ATC - Android Application Development'),
@@ -72,8 +79,8 @@ class _HomePageState extends State<HomePage>
               ]),
               header('Skills'),
               bodyTwo([
-                blackTextTwo('Java, Kotlin, Dart, Flutter'),
-                blackTextTwo('Android Studio, VS code, Gradle'),
+                blackTextTwo('Java, Kotlin, Dart, Flutter, T-SQL'),
+                blackTextTwo('Android Studio, VS code, Gradle, Sql Server, BPMS'),
                 blackTextTwo(
                     'Jetpack Compose, Architecture Components, Rxjava, Dagger2, Hilt, Room'),
                 blackTextTwo('MVVM, MPV, MVI, Clean Code'),
@@ -278,7 +285,7 @@ class _HomePageState extends State<HomePage>
                 ),
               ),
               Text(
-                'Mobile Developer',
+                'Software Engineer',
                 style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
