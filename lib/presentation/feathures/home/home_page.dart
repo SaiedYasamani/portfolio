@@ -11,20 +11,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage>
     with SingleTickerProviderStateMixin {
-  late final AnimationController _controller = AnimationController(
-    vsync: this,
-    duration: const Duration(seconds: 10),
-  )..repeat(reverse: true);
 
-  late final Animation<Offset> _offsetAnimaiton = Tween<Offset>(
-    begin: Offset.zero,
-    end: const Offset(1.5, 0.0),
-  ).animate(
-    CurvedAnimation(
-      parent: _controller,
-      curve: Curves.elasticIn,
-    ),
-  );
 
   @override
   Widget build(BuildContext context) {
@@ -245,98 +232,93 @@ class _HomePageState extends State<HomePage>
   Container profile(BuildContext context) {
     return Container(
       alignment: Alignment.center,
-      child: SlideTransition(
-        position: _offsetAnimaiton,
-        child: Stack(
-          alignment: Alignment.centerRight,
-          children: [
-            info(context),
-            avatar(),
-          ],
-        ),
+      padding: const EdgeInsets.all(8.0),
+      child: Stack(
+        alignment: Alignment.centerRight,
+        children: [
+          info(context),
+          avatar(),
+        ],
       ),
     );
   }
 
-  Padding info(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(26.0),
-      child: Container(
-        width: double.infinity,
-        decoration: const BoxDecoration(
-          color: Color.fromARGB(150, 191, 243, 243),
-          borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(30),
-            bottomLeft: Radius.circular(30),
-            topRight: Radius.circular(50),
-            bottomRight: Radius.circular(50),
-          ),
+   Widget info(BuildContext context) {
+    return Container(
+      width: double.infinity,
+      decoration: const BoxDecoration(
+        color: Color.fromARGB(150, 191, 243, 243),
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(30),
+          bottomLeft: Radius.circular(30),
+          topRight: Radius.circular(50),
+          bottomRight: Radius.circular(50),
         ),
-        child: const Padding(
-          padding: EdgeInsets.all(16),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                'Saeed Yasamani',
-                style: TextStyle(
-                  fontSize: 30,
-                  fontWeight: FontWeight.bold,
-                ),
+      ),
+      child: const Padding(
+        padding: EdgeInsets.all(16),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              'Saeed Yasamani',
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
               ),
-              Text(
-                'Software Engineer',
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                  fontStyle: FontStyle.italic,
-                  color: Colors.green,
-                ),
+            ),
+            Text(
+              'Software Engineer',
+              style: TextStyle(
+                fontSize: 10,
+                fontWeight: FontWeight.bold,
+                fontStyle: FontStyle.italic,
+                color: Colors.green,
               ),
-              Padding(
-                padding: EdgeInsets.only(top: 8, bottom: 8, right: 8),
-                child: Divider(
-                  color: Colors.teal,
-                  height: 3,
-                  thickness: 3,
-                ),
+            ),
+            Padding(
+              padding: EdgeInsets.only(top: 8, bottom: 8, right: 8),
+              child: Divider(
+                color: Colors.teal,
+                height: 3,
+                thickness: 3,
               ),
-              Row(
-                children: [
-                  Icon(
-                    Icons.phone_android_outlined,
-                    size: 20,
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(left: 8),
-                    child: Text(
-                      '+98914 - 644 - 6689',
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                      ),
+            ),
+            Row(
+              children: [
+                Icon(
+                  Icons.phone_android_outlined,
+                  size: 10,
+                ),
+                Padding(
+                  padding: EdgeInsets.only(left: 8),
+                  child: Text(
+                    '+98914 - 644 - 6689',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
                     ),
                   ),
-                ],
-              ),
-              Row(
-                children: [
-                  Icon(
-                    Icons.mail,
-                    size: 20,
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(left: 8),
-                    child: Text(
-                      'saeidyasamani@gmail.com',
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                      ),
+                ),
+              ],
+            ),
+            Row(
+              children: [
+                Icon(
+                  Icons.mail,
+                  size: 10,
+                ),
+                Padding(
+                  padding: EdgeInsets.only(left: 8),
+                  child: Text(
+                    'saeidyasamani@gmail.com',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
                     ),
-                  )
-                ],
-              ),
-            ],
-          ),
+                  ),
+                )
+              ],
+            ),
+          ],
         ),
       ),
     );
@@ -344,8 +326,8 @@ class _HomePageState extends State<HomePage>
 
   Container avatar() {
     return Container(
-      width: 160,
-      height: 160,
+      width: 140,
+      height: 140,
       decoration: const BoxDecoration(
           shape: BoxShape.circle,
           color: Colors.white,
